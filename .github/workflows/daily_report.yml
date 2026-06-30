@@ -1,0 +1,36 @@
+name: Daily Portfolio Report
+
+on:
+  schedule:
+    - cron: '0 23 * * 1-5'  # 23:00 PM UTC, Monday-Friday
+  workflow_dispatch:          # Allow manual trigger for testing
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run portfolio pipeline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python -m src.pipeline
+
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-results
+          path: artifacts/pipeline_results.json

@@ -1,0 +1,299 @@
+{
+  "timestamp": "2026-06-30T13:22:08.521940",
+  "stocks": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "TSLA",
+    "NVDA",
+    "META",
+    "AMZN"
+  ],
+  "config": {
+    "horizon_days": 30,
+    "strategy": "max_sharpe",
+    "max_weight": 0.4,
+    "min_weight": 0.02
+  },
+  "available_stocks": [
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "TSLA",
+    "NVDA",
+    "META",
+    "AMZN"
+  ],
+  "forecasts": {
+    "AAPL": {
+      "return": -0.048553973629128305,
+      "volatility": 0.23513972415264922,
+      "confidence": 0.3,
+      "direction": "down",
+      "rmse": 0.08608575150522636,
+      "mae": 0.07171732114380547,
+      "horizon_days": 30
+    },
+    "MSFT": {
+      "return": 0.059267051497280246,
+      "volatility": 0.28940508111429414,
+      "confidence": 0.3,
+      "direction": "up",
+      "rmse": 0.10830326307416457,
+      "mae": 0.0934720969232925,
+      "horizon_days": 30
+    },
+    "GOOGL": {
+      "return": 0.12898882963188518,
+      "volatility": 0.41517285541413534,
+      "confidence": 0.3,
+      "direction": "up",
+      "rmse": 0.16144493787113867,
+      "mae": 0.13643161464580283,
+      "horizon_days": 30
+    },
+    "TSLA": {
+      "return": -0.03531990530413816,
+      "volatility": 0.394718543263709,
+      "confidence": 0.3,
+      "direction": "down",
+      "rmse": 0.17402467560380255,
+      "mae": 0.1492682860966818,
+      "horizon_days": 30
+    },
+    "NVDA": {
+      "return": 0.03823658997158088,
+      "volatility": 0.4348122904700971,
+      "confidence": 0.3,
+      "direction": "up",
+      "rmse": 0.12574703345631943,
+      "mae": 0.0964505171738632,
+      "horizon_days": 30
+    },
+    "META": {
+      "return": -0.0022762295881271575,
+      "volatility": 0.36559793981042205,
+      "confidence": 0.3,
+      "direction": "sideways",
+      "rmse": 0.11132471527169545,
+      "mae": 0.09661244515989062,
+      "horizon_days": 30
+    },
+    "AMZN": {
+      "return": -0.1004713570078912,
+      "volatility": 0.21022962161616823,
+      "confidence": 0.3,
+      "direction": "down",
+      "rmse": 0.12627067302834522,
+      "mae": 0.09481250492035734,
+      "horizon_days": 30
+    }
+  },
+  "sentiment": {
+    "AAPL": {
+      "sentiment_score": -0.62,
+      "confidence": 0.85,
+      "signal": "bearish",
+      "key_factors": [
+        "Decline in iPhone sales due to increased competition from Android devices",
+        "Concerns over Apple's ability to innovate and adapt to changing consumer preferences",
+        "Impact of global economic slowdown on consumer spending"
+      ],
+      "risk_factors": [
+        "Potential for further decline in AAPL stock price if economic conditions worsen",
+        "Risk of increased competition from emerging tech companies"
+      ]
+    },
+    "MSFT": {
+      "sentiment_score": 0.73,
+      "confidence": 0.85,
+      "signal": "bullish",
+      "key_factors": [
+        "Strong cloud computing demand driving growth",
+        "Microsoft's Azure platform gaining market share",
+        "Increasing adoption of Microsoft 365 and Dynamics"
+      ],
+      "risk_factors": [
+        "Competition from Amazon Web Services (AWS) and Google Cloud",
+        "Potential regulatory challenges in the cloud computing space"
+      ]
+    },
+    "GOOGL": {
+      "sentiment_score": 0.73,
+      "confidence": 0.85,
+      "signal": "bullish",
+      "key_factors": [
+        "Strong earnings growth in digital advertising",
+        "Increasing adoption of AI technology",
+        "Positive sentiment from institutional investors"
+      ],
+      "risk_factors": [
+        "Potential regulatory risks in AI development",
+        "Competition from emerging AI players"
+      ]
+    },
+    "TSLA": {
+      "sentiment_score": -0.62,
+      "confidence": 0.85,
+      "signal": "bearish",
+      "key_factors": [
+        "Declining forecast return (-3.53%)",
+        "Increased volatility (39.47%)",
+        "Negative market direction"
+      ],
+      "risk_factors": [
+        "Competition from established automakers",
+        "Regulatory risks and uncertainty around EV incentives",
+        "High valuation multiples"
+      ]
+    },
+    "NVDA": {
+      "sentiment_score": 0.72,
+      "confidence": 0.85,
+      "signal": "bullish",
+      "key_factors": [
+        "Strong demand for AI and semiconductor technologies",
+        "Positive earnings guidance from major clients",
+        "Increasing adoption of NVIDIA's products in cloud computing"
+      ],
+      "risk_factors": [
+        "Potential impact of global economic slowdown on semiconductor demand",
+        "Increased competition from rival chipmakers"
+      ]
+    },
+    "META": {
+      "sentiment_score": -0.42,
+      "confidence": 0.78,
+      "signal": "bearish",
+      "key_factors": [
+        "Declining user growth and engagement",
+        "Increased competition from TikTok and other social media platforms",
+        "Regulatory pressures and potential antitrust investigations"
+      ],
+      "risk_factors": [
+        "High volatility in the tech sector",
+        "Potential impact of economic downturn on advertising revenue"
+      ]
+    },
+    "AMZN": {
+      "sentiment_score": -0.65,
+      "confidence": 0.85,
+      "signal": "bearish",
+      "key_factors": [
+        "Decline in e-commerce sales due to economic uncertainty",
+        "Increased competition from other e-commerce platforms",
+        "Potential regulatory challenges in cloud services"
+      ],
+      "risk_factors": [
+        "High volatility in the tech sector",
+        "Dependence on Amazon Web Services (AWS) for revenue growth"
+      ]
+    }
+  },
+  "macro": {
+    "interest_rate_impact": "neutral",
+    "inflation_signal": "moderate",
+    "market_outlook": "bullish",
+    "gdp_trend": "expanding",
+    "sectors_to_overweight": [
+      "Technology",
+      "Healthcare",
+      "Renewable Energy"
+    ],
+    "sectors_to_underweight": [
+      "Energy",
+      "Financials"
+    ],
+    "key_risks": [
+      "Global Trade Tensions",
+      "Geopolitical Uncertainty",
+      "Inflation Surprises"
+    ],
+    "overall_score": 0.6
+  },
+  "genai_features": {
+    "AAPL": {
+      "sentiment_score": -0.62,
+      "sentiment_signal": -1.0,
+      "sentiment_confidence": 0.85,
+      "macro_score": 0.6,
+      "rate_impact": 0.0,
+      "inflation_signal": 0.0
+    },
+    "MSFT": {
+      "sentiment_score": 0.73,
+      "sentiment_signal": 1.0,
+      "sentiment_confidence": 0.85,
+      "macro_score": 0.6,
+      "rate_impact": 0.0,
+      "inflation_signal": 0.0
+    },
+    "GOOGL": {
+      "sentiment_score": 0.73,
+      "sentiment_signal": 1.0,
+      "sentiment_confidence": 0.85,
+      "macro_score": 0.6,
+      "rate_impact": 0.0,
+      "inflation_signal": 0.0
+    },
+    "TSLA": {
+      "sentiment_score": -0.62,
+      "sentiment_signal": -1.0,
+      "sentiment_confidence": 0.85,
+      "macro_score": 0.6,
+      "rate_impact": 0.0,
+      "inflation_signal": 0.0
+    },
+    "NVDA": {
+      "sentiment_score": 0.72,
+      "sentiment_signal": 1.0,
+      "sentiment_confidence": 0.85,
+      "macro_score": 0.6,
+      "rate_impact": 0.0,
+      "inflation_signal": 0.0
+    },
+    "META": {
+      "sentiment_score": -0.42,
+      "sentiment_signal": -1.0,
+      "sentiment_confidence": 0.78,
+      "macro_score": 0.6,
+      "rate_impact": 0.0,
+      "inflation_signal": 0.0
+    },
+    "AMZN": {
+      "sentiment_score": -0.65,
+      "sentiment_signal": -1.0,
+      "sentiment_confidence": 0.85,
+      "macro_score": 0.6,
+      "rate_impact": 0.0,
+      "inflation_signal": 0.0
+    }
+  },
+  "portfolio": {
+    "AAPL": 0.019999999999999997,
+    "MSFT": 0.39999999999999647,
+    "GOOGL": 0.3999999999999983,
+    "TSLA": 0.02000000000000103,
+    "NVDA": 0.12000000000000394,
+    "META": 0.020000000000000285,
+    "AMZN": 0.019999999999999997
+  },
+  "metrics": {
+    "expected_return": 0.37785032077092606,
+    "volatility": 0.2322868971889585,
+    "sharpe_ratio": 1.4114024967590169,
+    "max_drawdown": -0.2506908440103882,
+    "beta": 0.8157509986379432,
+    "expected_returns_per_stock": {
+      "AAPL": -0.09493160403559167,
+      "MSFT": 0.2335138034412514,
+      "GOOGL": 0.6059644939035748,
+      "TSLA": 0.001688047108838008,
+      "NVDA": 0.38737240272002543,
+      "META": 0.1101446287988043,
+      "AMZN": -0.2381853965424104
+    }
+  },
+  "explanation": "Good morning, our portfolio is positioned for a moderate growth environment with a Sharpe ratio of 1.411. The overall market outlook is cautiously optimistic, with our expected return at 0.378.\n\nOur top 2 conviction positions are MSFT (40.0% weight) and GOOGL (40.0% weight), driven by their strong growth forecasts (+5.93% and +12.90%, respectively) and bullish sentiment signals.\n\nMain risks to monitor today include potential drawdowns, with our max drawdown at -0.251, and volatility at 0.232. We also note bearish sentiment signals for AAPL, TSLA, and AMZN.\n\nOur actionable insight is to consider trimming our AAPL position (currently 2.0% weight) given its -4.86% forecast and bearish sentiment signal, and reallocating to MSFT or GOOGL to maintain our growth momentum.",
+  "email_sent": true
+}
