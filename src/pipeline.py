@@ -29,7 +29,8 @@ CONFIG = {
 def run_pipeline(
     stocks: list = STOCKS,
     config: dict = CONFIG,
-    save_results: bool = True
+    save_results: bool = True,
+    send_email: bool = True
 ) -> dict:
     """
     Run the complete portfolio optimization pipeline.
@@ -130,13 +131,17 @@ def run_pipeline(
         results["explanation"] = "Explanation unavailable."
 
     
-        # ── STAGE 6: SEND EMAIL REPORT ────────────────────────────────────────
-    print("\n📧 STAGE 6: Sending email report...")
-    try:
-        email_sent = send_daily_report(results)
-        results["email_sent"] = email_sent
-    except Exception as e:
-        print(f"⚠️  Stage 6 failed: {e}")
+    # ── STAGE 6: SEND EMAIL REPORT ────────────────────────────────────────
+    if send_email:
+        print("\n📧 STAGE 6: Sending email report...")
+        try:
+            email_sent = send_daily_report(results)
+            results["email_sent"] = email_sent
+        except Exception as e:
+            print(f"⚠️  Stage 6 failed: {e}")
+            results["email_sent"] = False
+    else:
+        print("\n📧 STAGE 6: Skipped (send_email=False)")
         results["email_sent"] = False
 
     # ── STAGE 7: SAVE RESULTS ─────────────────────────────────────────────
