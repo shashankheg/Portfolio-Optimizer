@@ -1,16 +1,11 @@
 ﻿---
 title: AI Portfolio Optimizer
-emoji: chart
+emoji: 📈
 colorFrom: green
 colorTo: blue
 sdk: docker
 pinned: false
 ---
-
-# AI Portfolio Optimizer
-
-Time series forecasting + GenAI sentiment + portfolio optimization.
-
 
 # 📈 AI Portfolio Optimizer
 
@@ -55,3 +50,7 @@ Interactive web interface to run the pipeline with custom stock selections.
 Supports configurable optimization strategy, max weight, and forecast horizon.
 Displays results across 4 tabs — Portfolio, Metrics, Sentiment, AI Analysis.
 
+---
+
+## ⚠️ Disclaimer
+For informational purposes only. Not financial advice.
