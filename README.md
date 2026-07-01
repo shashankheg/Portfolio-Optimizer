@@ -1,11 +1,16 @@
----
+﻿---
 title: AI Portfolio Optimizer
-emoji: 📈
+emoji: chart
 colorFrom: green
-colorTo: teal
+colorTo: blue
 sdk: docker
 pinned: false
 ---
+
+# AI Portfolio Optimizer
+
+Time series forecasting + GenAI sentiment + portfolio optimization.
+
 
 # 📈 AI Portfolio Optimizer
 
@@ -50,35 +55,3 @@ Interactive web interface to run the pipeline with custom stock selections.
 Supports configurable optimization strategy, max weight, and forecast horizon.
 Displays results across 4 tabs — Portfolio, Metrics, Sentiment, AI Analysis.
 
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **LLM** | Groq LLaMA 3.3 70B + LLaMA 3.1 8B |
-| **Forecasting** | Gradient Boosting (scikit-learn) |
-| **Optimization** | SciPy SLSQP solver |
-| **UI** | Gradio |
-| **Email** | SendGrid |
-| **Scheduling** | GitHub Actions |
-| **Deployment** | Docker + Hugging Face Spaces |
-
----
-
-## 🚀 Local Setup
-
-```bash
-git clone https://github.com/shashankheg/Portfolio-Optimizer.git
-cd Portfolio-Optimizer
-uv venv --python 3.11
-.venv\Scripts\activate
-uv pip install -r requirements.txt
-# Add keys to .env file
-python -m src.app
-```
-
----
-
-## ⚠️ Disclaimer
-For informational purposes only. Not financial advice.
